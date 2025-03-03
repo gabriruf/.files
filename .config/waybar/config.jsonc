@@ -1,0 +1,95 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/submap",
+        "custom/media",
+        "hyprland/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "mpris",
+        "privacy",
+        "wireplumber",
+        "cpu",
+        "memory",
+        "network",
+        "clock",
+        "tray"
+    ],
+    "hyprland/workspaces": {
+        "active-only": false
+    },
+    "hyprland/window": {
+        "format": " {title} "
+    },
+    "mpris": {
+        "player": "ncspot",
+	    "format": " [ {artist} - {title} ] ",
+	    "format-paused": " [ PAUSED MUSIC ] "
+    },
+    "wireplumber": {
+        "format": " [ {volume}% vol ] ",
+        "format-muted": "",
+        "on-click": "helvum",
+        "max-volume": 150,
+        "scroll-step": 0.2
+    },
+    "cpu": {
+        "format": "[ {usage}% cpu ] ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "[ {}% ram ] "
+    },
+    "custom/weather": {
+        "exec": "weather",
+        "format": "[ {} ] ",
+        "interval": 2
+    },
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    },
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "[ {signalStrength}% {ifname} ] ",
+        "format-ethernet": "[ {ipaddr}/{cidr} 󰊗 ]",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "format": "[ {:%d-%m-%y | %I:%M %p} ] ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+    }
+}

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+[ $1 == "inc" ] && wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && dunstify -t 1500 "Increasing volume by $(wpctl get-volume @DEFAULT_SINK@ | awk '{ print $2 }')"
+[ $1 == "dec" ] && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && dunstify -t 1500 "Decreasing volume by $(wpctl get-volume @DEFAULT_SINK@ | awk '{ print $2 }')"
+
+

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+export SCREENSHOT="$HOME/Pictures/Screenshots/$(date +%F-%H-%M-%S)"
+dunst_action="nsxiv $SCREENSHOT' "Screenshot taken!""
+
+[ $1 = "full" ] && grim $SCREENSHOT; wl-copy -t image/png < $SCREENSHOT && dunstify --action '$dunst_action' "Screenshot taken!"
+[ $1 = "select" ] && grim -g "$(slurp)" $SCREENSHOT; wl-copy -t image/png < $SCREENSHOT && dunstify --action '$dunst_action' "Screenshot taken!"
+
+
