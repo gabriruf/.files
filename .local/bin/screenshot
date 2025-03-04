@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export SCREENSHOT="$HOME/Pictures/Screenshots/$(date +%F-%H-%M-%S)"
+export SCREENSHOT="$HOME/Pictures/Screenshots/$(date +%F-%H-%M-%S).png"
 dunst_action="nsxiv $SCREENSHOT' "Screenshot taken!""
 
 [ $1 = "full" ] && grim $SCREENSHOT; wl-copy -t image/png < $SCREENSHOT && dunstify --action '$dunst_action' "Screenshot taken!"
