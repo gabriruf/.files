@@ -49,7 +49,6 @@ setopt no_case_glob no_case_match # make cmp case insensitive
 setopt globdots # include dotfiles
 setopt extended_glob # match ~ # ^
 setopt interactive_comments # allow comments in shell
-unsetopt prompt_sp # don't autoclean blanklines
 stty stop undef # disable accidental ctrl s
 
 HISTSIZE=1000000
