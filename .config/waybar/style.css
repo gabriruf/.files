@@ -1,7 +1,9 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Hack Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    margin: -5px 0px;
+    min-height: 0px;
 }
 
 window#waybar {
@@ -68,10 +70,6 @@ button:hover {
 #mpris {
     color: #5af542;
 }
-
-
-#window,
-
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
