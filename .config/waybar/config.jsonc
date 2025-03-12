@@ -15,7 +15,6 @@
     "modules-center": [],
     "modules-right": [
         "mpris",
-        "privacy",
         "wireplumber",
         "cpu",
         "memory",
@@ -35,7 +34,7 @@
 	    "format-paused": " [ PAUSED MUSIC ] "
     },
     "wireplumber": {
-        "format": " [ {volume}% vol ] ",
+        "format": "[ {volume}% vol ] ",
         "format-muted": "",
         "on-click": "helvum",
         "max-volume": 150,
@@ -79,8 +78,7 @@
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} ",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50
+        "tooltip-format-disconnected": "Disconnected"
     },
     "clock": {
         // "timezone": "America/New_York",
